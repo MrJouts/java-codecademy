@@ -9,15 +9,18 @@ public class Store {
 
     // advertise method
     public void advertise() {
-        System.out.println("Selling " + productType + "!");
-        System.out.println("Come spend some money!");
+        String message = "Selling " + productType + "!";
+        System.out.println(message);
+    }
+
+    // greetCustomer method
+    public void greetCustomer(String customer) {
+        System.out.println("Welcome to the store, " + customer + "!");
     }
 
     // main method
     public static void main(String[] args) {
         Store lemonadeStand = new Store("Lemonade");
-        lemonadeStand.advertise();
-        lemonadeStand.advertise();
-        lemonadeStand.advertise();
+        lemonadeStand.greetCustomer("Kintaro");
     }
 }
