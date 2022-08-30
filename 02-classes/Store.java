@@ -1,19 +1,21 @@
 public class Store {
     // instance fields
     String productType;
-    int inventoryCount;
-    double inventoryPrice;
+
+    public void advertise() {
+        System.out.println("Come spend some money!");
+        System.out.println("Selling " + productType + "!");
+    }
 
     // constructor method
-    public Store(String product, int count, double price) {
+    public Store(String product) {
         productType = product;
-        inventoryCount = count;
-        inventoryPrice = price;
     }
+
+    // advertise method
 
     // main method
     public static void main(String[] args) {
-        Store cookieShop = new Store("cookies", 12, 3.75);
-        System.out.println(cookieShop.inventoryCount);
+
     }
 }
