@@ -1,26 +1,24 @@
 public class Store {
     // instance fields
     String productType;
+    double price;
 
     // constructor method
-    public Store(String product) {
+    public Store(String product, double initialPrice) {
         productType = product;
+        price = initialPrice;
     }
 
-    // advertise method
-    public void advertise() {
-        String message = "Selling " + productType + "!";
-        System.out.println(message);
-    }
-
-    // greetCustomer method
-    public void greetCustomer(String customer) {
-        System.out.println("Welcome to the store, " + customer + "!");
+    // increase price method
+    public void increasePrice(double priceToAdd){
+        double newPrice = price +  priceToAdd;
+        price = newPrice;
     }
 
     // main method
     public static void main(String[] args) {
-        Store lemonadeStand = new Store("Lemonade");
-        lemonadeStand.greetCustomer("Kintaro");
+        Store lemonadeStand = new Store("Lemonade", 3.75);
+        lemonadeStand.increasePrice(1.5);
+        System.out.println(lemonadeStand.price);
     }
 }
