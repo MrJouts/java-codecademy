@@ -2,11 +2,15 @@ public class Order {
 
     public static void main(String[] args) {
 
-        double itemCost = 30.99;
+        boolean isFilled = false;
 
-        // Write an if-then statement:
-        if(itemCost > 24)
-            System.out.print("High value item!");
+        // Write an if-then-else statement:
+        if(isFilled) {
+            System.out.println("Shipping.");
+        } else {
+            System.out.println("Order not ready.");
         }
+
+    }
 
 }
