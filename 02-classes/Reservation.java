@@ -24,7 +24,6 @@ public class Reservation {
     }
 
     public void informUser() {
-        // Write conditional here
         if (!isConfirmed) {
             System.out.println("Unable to confirm reservation, please contact restaurant.");
         } else {
@@ -33,11 +32,13 @@ public class Reservation {
     }
 
     public static void main(String[] args) {
-        Reservation partyOfThree = new Reservation(3, 12, true);
-        Reservation partyOfFour = new Reservation(4, 3, true);
-        partyOfThree.confirmReservation();
-        partyOfThree.informUser();
-        partyOfFour.confirmReservation();
-        partyOfFour.informUser();
+        // Create instances here
+        Reservation reservation1 = new Reservation(10, 10, false);
+        reservation1.confirmReservation();
+        reservation1.informUser();
+
+        Reservation reservation2 = new Reservation(4, 10, true);
+        reservation2.confirmReservation();
+        reservation2.informUser();
     }
 }
