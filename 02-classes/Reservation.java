@@ -5,31 +5,23 @@ public class Reservation {
     boolean isConfirmed;
 
     public Reservation(int count, int capacity, boolean open) {
+        // Write conditional statement below
+        if(count <= 0 || count > 8) {
+            System.out.println("Invalid reservation!");
+        }
+
         guestCount = count;
         restaurantCapacity = capacity;
         isRestaurantOpen = open;
     }
 
     public void confirmReservation() {
-    /*
-       Write conditional
-       ~~~~~~~~~~~~~~~~~
-       if restaurantCapacity is greater
-       or equal to guestCount
-       AND
-       the restaurant is open:
-         print "Reservation confirmed"
-         set isConfirmed to true
-       else:
-         print "Reservation denied"
-         set isConfirmed to false
-    */
         if (restaurantCapacity >= guestCount && isRestaurantOpen) {
-            isConfirmed = true;
             System.out.println("Reservation confirmed");
+            isConfirmed = true;
         } else {
-            isConfirmed = false;
             System.out.println("Reservation denied");
+            isConfirmed = false;
         }
     }
 
