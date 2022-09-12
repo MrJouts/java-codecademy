@@ -18,6 +18,8 @@ public class CheckingAccount{
     public static void main(String[] args){
         CheckingAccount myAccount = new CheckingAccount("Persephone", 777);
         System.out.println(myAccount.balance);
+        myAccount.addFunds(5);
+        System.out.println(myAccount.balance);
     }
 
 }
