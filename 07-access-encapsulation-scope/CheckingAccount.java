@@ -1,20 +1,23 @@
 public class CheckingAccount{
-    public String name;
+    private String name;
     private int balance;
-    private String id;
 
-    public CheckingAccount(String inputName, int inputBalance, String inputId){
+    public CheckingAccount(String inputName, int inputBalance){
         name = inputName;
         balance = inputBalance;
-        id = inputId;
     }
 
-    public void addFunds(int fundsToAdd){
+    private void addFunds(int fundsToAdd){
         balance += fundsToAdd;
     }
 
-    public void getInfo(){
+    private void getInfo(){
         System.out.println("This checking account belongs to " + name +". It has " + balance + " dollars in it.");
+    }
+
+    public static void main(String[] args){
+        CheckingAccount myAccount = new CheckingAccount("Persephone", 777);
+        System.out.println(myAccount.balance);
     }
 
 }

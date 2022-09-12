@@ -3,8 +3,8 @@ public class Bank{
     private CheckingAccount accountTwo;
 
     public Bank(){
-        accountOne = new CheckingAccount("Zeus", 100, "1");
-        accountTwo = new CheckingAccount("Hades", 200, "2");
+        accountOne = new CheckingAccount("Zeus", 100);
+        accountTwo = new CheckingAccount("Hades", 200);
     }
 
     public static void main(String[] args){
