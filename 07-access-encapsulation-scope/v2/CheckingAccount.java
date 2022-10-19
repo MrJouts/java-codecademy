@@ -14,13 +14,14 @@ public class CheckingAccount{
     public void getAccountInformation(){
         System.out.println("Money in account: " + this.getBalance());
         System.out.println("Next Month's Interest: " + this.calculateNextMonthInterest());
-
     }
 
     private int getBalance(){
         return this.balance;
     }
 
-    // Write the calculateNextMonthInterest() here
+    private double calculateNextMonthInterest(){
+        return this.balance * this.interestRate;
+    }
 
 }
