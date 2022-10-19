@@ -22,7 +22,9 @@ public class Person{
     }
 
     public void hasBirthday(){
-        //Complete this method
+        this.age += 1;
+        this.wisdom += 5;
+        this.fitness -= 3;
     }
 
     public static void main(String[] args){
