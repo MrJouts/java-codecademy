@@ -19,10 +19,15 @@ public class ATM{
         }
     }
 
-    // Write your averageMoney() method here
-    public static void averageMoney() {
+    public void depositMoney(int amountToDeposit){
+        if(amountToDeposit > 0) {
+            this.money += amountToDeposit;
+            totalMoney += amountToDeposit;
+        }
+    }
+
+    public static void averageMoney(){
         System.out.println(totalMoney / numATMs);
-        System.out.println(this.money);
     }
 
     public static void main(String[] args){
@@ -35,11 +40,12 @@ public class ATM{
         System.out.println("Total amount of money in all ATMs: " + ATM.totalMoney);
         firstATM.withdrawMoney(500);
         secondATM.withdrawMoney(200);
+        secondATM.depositMoney(400);
+        secondATM.depositMoney(1000);
         System.out.println("Total amount of money in all ATMs: " + ATM.totalMoney);
 
         // Call averageMoney() here
         ATM.averageMoney();
-
     }
 
 }
