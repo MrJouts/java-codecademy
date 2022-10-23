@@ -8,18 +8,21 @@ public class ATM{
 
     public ATM(int inputMoney){
         this.money = inputMoney;
-
-        // Steps 1 and 2: Edit numATMs and total money here
-        numATMs++;
+        numATMs += 1;
         totalMoney += inputMoney;
     }
 
     public void withdrawMoney(int amountToWithdraw){
         if(amountToWithdraw <= this.money){
             this.money -= amountToWithdraw;
-            // Step 3: Edit totalMoney here
             totalMoney -= amountToWithdraw;
         }
+    }
+
+    // Write your averageMoney() method here
+    public static void averageMoney() {
+        System.out.println(totalMoney / numATMs);
+        System.out.println(this.money);
     }
 
     public static void main(String[] args){
@@ -34,7 +37,8 @@ public class ATM{
         secondATM.withdrawMoney(200);
         System.out.println("Total amount of money in all ATMs: " + ATM.totalMoney);
 
-
+        // Call averageMoney() here
+        ATM.averageMoney();
 
     }
 
